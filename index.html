@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Pro</title>
+<style>
+    /* General Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color: #1b1b1b; color: #fff; }
+
+    /* Navbar */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: transparent; }
+    nav .logo { font-size: 32px; font-weight: bold; color: #ff6333; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a { color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 20px; transition: 0.3s; }
+    nav ul li a.active, nav ul li a:hover { background-color: #ff6333; }
+
+    /* Hero Section */
+    .hero { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 50px; align-items: center; }
+    .hero-text { max-width: 50%; }
+    .hero-text h1 { font-size: 50px; line-height: 1.2; }
+    .hero-text h1 span { color: #ff6333; font-family: 'Brush Script MT', cursive; font-size: 60px; }
+    .hero-text p { margin-top: 20px; font-size: 18px; color: #ccc; }
+    .hero-buttons { margin-top: 30px; }
+    .hero-buttons a { text-decoration: none; padding: 15px 30px; margin-right: 20px; border-radius: 30px; font-weight: bold; transition: 0.3s; }
+    .join-btn { background-color: #ff6333; color: #fff; }
+    .download-btn { background: transparent; border: 2px solid #ff6333; color: #fff; }
+    .hero-image img { max-width: 100%; border-radius: 20px; }
+
+    /* Features Section */
+    .features { background: #010101; padding: 50px 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .feature-card { background: #181818; border-radius: 15px; width: 300px; text-align: center; padding: 20px; transition: 0.3s; }
+    .feature-card img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; }
+    .feature-card h3 { margin-bottom: 10px; }
+    .feature-card p { color: #aaa; font-size: 15px; }
+
+    /* BMI Section */
+    .bmi { background: #181818; padding: 50px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+    .bmi .calculator, .bmi .chart { background: #282828; padding: 20px; border-radius: 10px; width: 48%; }
+    .bmi input, .bmi select, .bmi button { width: 100%; margin-bottom: 15px; padding: 10px; border-radius: 5px; border: none; background: #383838; color: #fff; font-size: 16px; }
+    .bmi button { background: #ff4b4b; cursor: pointer; }
+    .bmi table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .bmi th, .bmi td { padding: 10px; border: 1px solid #444; text-align: left; }
+    .bmi th { background: #383838; }
+
+    /* Footer */
+    footer { background: #1e1e1e; padding: 50px 20px; display: flex; justify-content: space-between; flex-wrap: wrap; }
+    footer h2 { margin-bottom: 20px; }
+    footer p, footer a { font-size: 16px; color: #ccc; text-decoration: none; }
+    footer a:hover { color: #ff6333; }
+    footer .section { width: 30%; margin-bottom: 20px; }
+
+    @media (max-width: 768px) {
+        .hero { flex-direction: column; }
+        .hero-text, .hero-image { max-width: 100%; }
+        .bmi .calculator, .bmi .chart { width: 100%; }
+        footer .section { width: 100%; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">FitnessPro</div>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#bmi">BMI Calculator</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Get in <span>Shape</span> & Stay Healthy</h1>
+        <p>Join our fitness platform with workout plans, nutrition guides, and transformation stories to achieve your goals.</p>
+        <div class="hero-buttons">
+            <a href="#" class="join-btn">Join Now</a>
+            <a href="#" class="download-btn">Download App</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Fitness Hero">
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <div class="feature-card">
+        <img src="https://images.pexels.com/photos/3757957/pexels-photo-3757957.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Movement">
+        <h3>Movement</h3>
+        <p>Accessible workouts for everyone, anywhere.</p>
+    </div>
+    <div class="feature-card">
+        <img src="https://images.pexels.com/photos/2294351/pexels-photo-2294351.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Time">
+        <h3>Time</h3>
+        <p>Short and effective routines to fit your schedule.</p>
+    </div>
+    <div class="feature-card">
+        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Practice">
+        <h3>Practice</h3>
+        <p>Learn the right techniques with guided tutorials.</p>
+    </div>
+    <div class="feature-card">
+        <img src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&h=500" alt="Weight Loss">
+        <h3>Weight Loss</h3>
+        <p>Track progress and reach your goals safely.</p>
+    </div>
+</section>
+
+<!-- BMI Section -->
+<section class="bmi" id="bmi">
+    <div class="chart">
+        <h2>BMI Chart</h2>
+        <table>
+            <tr><th>BMI</th><th>Weight Status</th></tr>
+            <tr><td>Below 18.5</td><td>Underweight</td></tr>
+            <tr><td>18.5 - 24.9</td><td>Healthy</td></tr>
+            <tr><td>25.0 - 29.9</td><td>Overweight</td></tr>
+            <tr><td>30.0 and Above</td><td>Obese</td></tr>
+        </table>
+    </div>
+    <div class="calculator">
+        <h2>Calculate Your BMI</h2>
+        <input type="number" id="height" placeholder="Height (cm)">
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <button onclick="calculateBMI()">Calculate</button>
+        <p id="bmiResult"></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="section">
+        <h2>FitnessPro</h2>
+        <p>Your ultimate fitness platform for workouts, nutrition, and tracking progress.</p>
+    </div>
+    <div class="section">
+        <h2>Links</h2>
+        <p><a href="#home">Home</a></p>
+        <p><a href="#features">Features</a></p>
+        <p><a href="#bmi">BMI Calculator</a></p>
+        <p><a href="#contact">Contact</a></p>
+    </div>
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Email: info@fitnesspro.com</p>
+        <p>Phone: +123 456 7890</p>
+    </div>
+</footer>
+
+<script>
+function calculateBMI() {
+    const height = parseFloat(document.getElementById('height').value) / 100;
+    const weight = parseFloat(document.getElementById('weight').value);
+    if(height > 0 && weight > 0){
+        const bmi = (weight / (height * height)).toFixed(1);
+        let status = "";
+        if(bmi < 18.5) status = "Underweight";
+        else if(bmi < 25) status = "Healthy";
+        else if(bmi < 30) status = "Overweight";
+        else status = "Obese";
+        document.getElementById('bmiResult').innerText = `BMI: ${bmi} - ${status}`;
+    } else {
+        document.getElementById('bmiResult').innerText = "Please enter valid height and weight.";
+    }
+}
+</script>
+
+</body>
+</html>
